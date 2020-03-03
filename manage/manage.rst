@@ -349,5 +349,3 @@ Successful deployment of Frame-managed workloads on Nutanix AHV/AOS/HCI to suppo
 
 - Networking (between the AHV clusters and the Frame Control Plane, between end user and Frame Control Plane, and between end user and workload VMs). Use the AHV Cluster Prerequisites Checklist as a guide to validate that the AHV Cluster and network is ready for Frame.
 - The enterprise’s Windows domain, if the Frame-managed workload VMs must be joined to the Windows Active Directory.
-
-*Good luck selling!*

@@ -6,13 +6,19 @@
    :name: _eucframe
    :hidden:
 
-   eucframe/gettingstarted/gettingstarted
-   eucframe/goldimage/goldimage
-   eucframe/deploycca/deploycca
-   eucframe/manage/manage
-   eucframe/framefiles/framefiles
-   eucframe/flow_secure_desktops/flow_secure_desktops
+   goldimage/goldimage
+   manage/manage
+   framefiles/framefiles
+   low_secure_desktops/flow_secure_desktops
    prismops/prismops_rightsize_frm_lab/prismops_rightsize_euc_lab
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Optional Labs
+   :name: _optional
+   :hidden:
+
+   edeploycca/deploycca
 
 .. toctree::
   :maxdepth: 2

@@ -1,5 +1,18 @@
 .. _framegoldimage:
 
+----------------------
+Getting Started
+----------------------
+
+Welcome to the End User Computing bootcamp featuring Xi Frame. This bootcamp is meant to provide you with first hand experience in why Nutanix is an ideal platform for VDI workloads, and can deliver a fully integrated experience with our cloud-hosted broker, Xi Frame. In addition to the benefits than Nutanix HCI brings to any virtual desktop deployment, such as linear scalability and consistent performance, Nutanix brings additional benefits that you'll explore through labs:
+
+- Native tools for migrating existing desktop images from ESXi
+- Integration with AHV to provide a no-cost, easy to manage platform for running on-premises virtual desktops
+- Fast desktop provisioning, including rolling out image updates to large pools of desktops
+- Native file services with Nutanix Files to deliver user data, profiles, and User Personalization Layers
+- Native microsegmentation with Nutanix Flow to secure a virtual desktop environment
+- Rich monitoring and automation capabilities with Prism Ops
+
 ------------------------------------
 Building & Optimizing the Gold Image
 ------------------------------------
@@ -14,8 +27,6 @@ As you can see there’s a 48% improvement of desktop density per node when appl
 
 Deploying a VM
 ++++++++++++++
-
-If you completed the :ref:`move` lab, skip to FramePausingUpdates_. Otherwise, follow the steps below to provision a VM to begin building your gold image.
 
 #. In **Prism Central**, select :fa:`bars` **> Virtual Infrastructure > VMs**.
 
@@ -40,7 +51,7 @@ If you completed the :ref:`move` lab, skip to FramePausingUpdates_. Otherwise, f
        - Select **Add**
 
    - Select **Add New NIC**
-       - **VLAN Name** - *User Assigned VLAN*
+       - **VLAN Name** - Secondary
        - Select **Add**
 
 #. Click **Save** to create the VM.
@@ -151,10 +162,6 @@ Additionally, during the brokering workflow, the Frame agent works in conjunctio
    .. figure:: images/20.png
 
 #. **IMPORTANT** From the **Control Panel**, uninstall any previously installed copied of **Microsoft Visual C++ Redistributable**.
-
-   .. note::
-
-      Philip Lau would like to remind you that **ANY** previously installed **Microsoft Visual C++ Redistributable** means **ALL** of them, and not just the two in the screenshot below.
 
    .. figure:: images/22.png
 
