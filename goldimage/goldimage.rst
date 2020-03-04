@@ -1,21 +1,11 @@
 .. _framegoldimage:
 
-----------------------
-Getting Started
-----------------------
-
-Welcome to the End User Computing bootcamp featuring Xi Frame. This bootcamp is meant to provide you with first hand experience in why Nutanix is an ideal platform for VDI workloads, and can deliver a fully integrated experience with our cloud-hosted broker, Xi Frame. In addition to the benefits than Nutanix HCI brings to any virtual desktop deployment, such as linear scalability and consistent performance, Nutanix brings additional benefits that you'll explore through labs:
-
-- Native tools for migrating existing desktop images from ESXi
-- Integration with AHV to provide a no-cost, easy to manage platform for running on-premises virtual desktops
-- Fast desktop provisioning, including rolling out image updates to large pools of desktops
-- Native file services with Nutanix Files to deliver user data, profiles, and User Personalization Layers
-- Native microsegmentation with Nutanix Flow to secure a virtual desktop environment
-- Rich monitoring and automation capabilities with Prism Ops
-
 ------------------------------------
 Building & Optimizing the Gold Image
 ------------------------------------
+
+Overview
+++++++++
 
 When we install a vanilla client operating system, we need to keep in mind that this OS was built for physical devices (i.e. laptops and desktops), with direct attached devices and limited noisy neighbor effects. If we install that same OS in a VM we might see different results, hence the need for optimization. The Nutanix Performance/Solutions Engineering team for EUC has tested various optimizations and the lab, and validated the following results:
 
