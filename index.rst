@@ -36,11 +36,13 @@
 Getting Started
 ---------------
 
-Welcome to the Nutanix Xi Frame on AHV Bootcamp! This workbook accompanies an instructor-led session that introduces Nutanix and Xi Frame technologies and many common management tasks.
+Welcome to the End User Computing bootcamp featuring Xi Frame. This bootcamp is meant to provide you with first hand experience in why Nutanix is an ideal platform for VDI workloads, and can deliver a fully integrated experience with our cloud-hosted broker, Xi Frame. In addition to the benefits than Nutanix HCI brings to any virtual desktop deployment, such as linear scalability and consistent performance, Nutanix brings additional benefits that you'll explore through labs:
 
-You will explore Prism Element and become familiar with its features and navigation. You will use Prism to perform basic cluster administration tasks, including storage and networking. You will also walk through basic VM deployment and management tasks with Prism and AHV. Finally, you will explore VM data protection, including snapshots and replication. The instructor explains the exercises and answers any additional questions that you may have.
-
-At the end of the bootcamp, attendees should understand the Core concepts and technologies that make up the Nutanix Enterprise Cloud stack and should be well prepared for a hosted or onsite proof-of-concept (POC) engagement.
+- Integration with AHV to provide a no-cost, easy to manage platform for running on-premises virtual desktops
+- Fast desktop provisioning, including rolling out image updates to large pools of desktops
+- Native file services with Nutanix Files to deliver user data, profiles, and User Personalization Layers
+- Native microsegmentation with Nutanix Flow to secure a virtual desktop environment
+- Rich monitoring and automation capabilities with Prism Ops
 
 What's New
 ++++++++++
