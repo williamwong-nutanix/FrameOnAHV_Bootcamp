@@ -6,7 +6,9 @@
    :name: _eucframe
    :hidden:
 
+   gettingstarted/gettingstarted
    goldimage/goldimage
+   deploycca/deploycca
    manage/manage
    framefiles/framefiles
    low_secure_desktops/flow_secure_desktops
@@ -166,7 +168,7 @@ Each cluster has a dedicated domain controller VM, **DC**, responsible for provi
 .. list-table::
    :widths: 25 35 40
    :header-rows: 1
-   
+
    * - Group
      - Username(s)
      - Password
