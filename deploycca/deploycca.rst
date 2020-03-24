@@ -8,9 +8,9 @@ While the Frame control plane is fully cloud-hosted, running on-premises desktop
 
 .. figure:: images/00.png
 
-There is the Cloud Connector Appliance (CCA), which enables Frame Platform to communicate with the Prism Central API. The CCA forwards create, start, stop, and delete VM commands to Prism Central, based on requests from Frame Platform. The CCA must be on the same VLAN as Prism Central.
+An on-premises virtual Cloud Connector Appliance (CCA), enables the cloud-hosted Frame Platform service to communicate with the on-premises Prism Central API. The CCA forwards commands to create, start, stop, and delete VMs to Prism Central, based on requests from the Frame Platform. The CCA appliance must be on the same VLAN as Prism Central.
 
-After the initial configuration following the CCA wizard deployment workflow, and upon successful registration of the AHV Cloud Account in Frame Platform, a second appliance is automatically created. This second appliance is the Workload Cloud Connector Appliance (also known as the Workload Proxy in Prism). The WCCA allows for Frame Platform to send orchestration information to all user workload VMs (Sandbox, Production instances, and Utility Servers). Without this appliance, end users will not be able to connect to the workload VMs.
+After the initial configuration following the CCA wizard deployment, and upon successful registration of the AHV Cloud Account to the Frame Platform, a second virtual appliance is automatically created. This second appliance is the Workload Cloud Connector Appliance (WCCA, also known as the Workload Proxy in Prism). The WCCA allows for Frame Platform to send orchestration information to all user workload VMs (Sandbox, Production instances, and Utility Servers). Without this appliance, end users will not be able to connect to the workload VMs.
 
 **In this lab you will deploy the Frame Cloud Connector Appliance and configure the connection between your cluster and the Frame control plane.**
 
@@ -32,6 +32,10 @@ In this exercise we'll take advantage of the Xi Frame trial offering, using your
 #. Under **Xi Cloud Services > Xi Frame**, click **Start Trial**.
 
    .. figure:: images/0a.png
+
+   .. note::
+
+     If you have already started a trial, click **Launch**
 
 #. Provide the additional requested information and click **Continue** to activate your 30 day trial.
 
@@ -70,7 +74,7 @@ Adding Prism Service Account
    - **First Name** - *Initials* Frame
    - **Last Name** - Service Account
    - **Email** - (Any e-mail address)
-   - **Password** - techX2020!
+   - **Password** - nutanix/4u
    - Under **Roles**, select **User Admin** and **Prism Central Admin**
 
    .. figure:: images/1.png
