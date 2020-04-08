@@ -11,7 +11,7 @@
    deploycca/deploycca
    manage/manage
    framefiles/framefiles
-   low_secure_desktops/flow_secure_desktops
+   flow_secure_desktops/flow_secure_desktops
    prismops/prismops_rightsize_frm_lab/prismops_rightsize_euc_lab
 
 .. toctree::
@@ -134,7 +134,51 @@ Each cluster is configured with 2 VLANs which can be used for VMs:
   * - Secondary
     - 10.21.\ *XYZ*\ .129/25
     - *XYZ1*
-    - 10.21.\ *XYZ*\ .132-10.21.\ *XYZ*\ .253
+    - 10.21.\ *XYZ*\ .132-10.21.\ *XYZ*\ .149
+  * - User01-Network
+    - 10.21.\ *XYZ*\ .129/25
+    - *XYZ1*
+    - 10.21.\ *XYZ*\ .150-10.21.\ *XYZ*\ .200
+  * - User02-Network
+    - 10.21.\ *XYZ*\ .129/25
+    - *XYZ1*
+    - 10.21.\ *XYZ*\ .150-10.21.\ *XYZ*\ .200
+  * - User03-Network
+    - 10.21.\ *XYZ*\ .129/25
+    - *XYZ1*
+    - 10.21.\ *XYZ*\ .150-10.21.\ *XYZ*\ .200
+  * - User04-Network
+    - 10.21.\ *XYZ*\ .129/25
+    - *XYZ1*
+    - 10.21.\ *XYZ*\ .150-10.21.\ *XYZ*\ .200
+  * - User05-Network
+    - 10.21.\ *XYZ*\ .129/25
+    - *XYZ1*
+    - 10.21.\ *XYZ*\ .150-10.21.\ *XYZ*\ .200
+  * - User06-Network
+    - 10.21.\ *XYZ*\ .129/25
+    - *XYZ1*
+    - 10.21.\ *XYZ*\ .150-10.21.\ *XYZ*\ .200
+  * - User07-Network
+    - 10.21.\ *XYZ*\ .129/25
+    - *XYZ1*
+    - 10.21.\ *XYZ*\ .150-10.21.\ *XYZ*\ .200
+  * - User08-Network
+    - 10.21.\ *XYZ*\ .129/25
+    - *XYZ1*
+    - 10.21.\ *XYZ*\ .150-10.21.\ *XYZ*\ .200
+  * - User09-Network
+    - 10.21.\ *XYZ*\ .129/25
+    - *XYZ1*
+    - 10.21.\ *XYZ*\ .150-10.21.\ *XYZ*\ .200
+  * - User10-Network
+    - 10.21.\ *XYZ*\ .129/25
+    - *XYZ1*
+    - 10.21.\ *XYZ*\ .150-10.21.\ *XYZ*\ .200
+  * - User11-Network
+    - 10.21.\ *XYZ*\ .129/25
+    - *XYZ1*
+    - 10.21.\ *XYZ*\ .150-10.21.\ *XYZ*\ .200
 
 Credentials
 ...........
