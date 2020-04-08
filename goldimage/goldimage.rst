@@ -10,7 +10,7 @@ When we install a vanilla client operating system, we need to keep in mind that 
 
 As you can see there’s a 48% improvement of desktop density per node when applying baseline Citrix optimizations, and increases to 57% with a second pass using VMware OS optimization recommendations. Note that both sets of optimizations are independent of underlying hypervisor, and rather tune services within the OS guest.
 
-**In this lab you will install the Frame Agent within a VM, and optimize the VM using both the Citrix Optimizer.**
+**In this lab you will install the Frame Agent within a VM, and optimize the VM using the Citrix Optimizer.**
 
 Deploying a VM
 ++++++++++++++
@@ -25,7 +25,7 @@ Deploying a VM
 
 #. Fill out the following fields:
 
-   - **Name** - *Initials*\ -FrameImage
+   - **Name** - *Initials*\ -GoldImage
    - **Description** - (Optional) Description for your VM.
    - **vCPU(s)** - 2
    - **Number of Cores per vCPU** - 1
@@ -38,7 +38,7 @@ Deploying a VM
        - Select **Add**
 
    - Select **Add New NIC**
-       - **VLAN Name** - *User Assigned VLAN*
+       - **VLAN Name** - *User Assigned Network*
        - Select **Add**
 
 #. Click **Save** to create the VM.
@@ -57,7 +57,7 @@ Before starting to build your **Windows 10** image it is important the ensure th
    - **User Name** - Nutanix
    - **Password** - nutanix/4u
 
-#. Open **System Settings > Windows Update** and click **Pause Updates for 7 Days**.
+#. Open **Start > Settings > Updates & Security > Windows Update** and click **Pause Updates for 7 Days**.
 
    .. figure:: images/24.png
 
@@ -90,6 +90,8 @@ Running Citrix Optimizer
  .. figure:: images/15.png
 
 #. Once the tool has completed, you can click **View Results** to view an updated report. You can now close the tool.
+
+#. Review the results and then **restart your Gold Image VM**.
 
 ..   Running VMware OS Optimization Tool
       +++++++++++++++++++++++++++++++++++
@@ -127,7 +129,9 @@ Additionally, during the brokering workflow, the Frame agent works in conjunctio
 
       Nutanix Guest Tools cannot be installed onto your gold master image, as this could cause communication issues between the Frame backplane and workload instances. If your image already has Nutanix Guest Tools installed, you must install VirtIO drivers before uninstalling Nutanix Guest Tools. If you attempt to remove Nutanix Guest Tools without first installing VirtIO drivers, your virtual machine will not boot.
 
-#. In **Prism Central**, select your GoldImage VM and click **Actions > Update**.
+#. In **Prism Central**, select your GoldImage VM and take note of the IP Address.
+
+#.  Then click **Actions > Update**.
 
    .. figure:: images/2.png
 
@@ -152,7 +156,7 @@ Additionally, during the brokering workflow, the Frame agent works in conjunctio
 
    .. note::
 
-      Philip Lau would like to remind you that **ANY** previously installed **Microsoft Visual C++ Redistributable** means **ALL** of them, and not just the two in the screenshot below.
+      **ANY** previously installed **Microsoft Visual C++ Redistributable** means **ALL** of them, and not just the two in the screenshot below.
 
    .. figure:: images/22.png
 
@@ -164,19 +168,19 @@ Additionally, during the brokering workflow, the Frame agent works in conjunctio
 
 #. When prompted, click **Restart** to complete the installation.
 
-#. After approximately 60 seconds, connect to the VM via RDP and execute the following in **PowerShell**:
+#. After approximately 60 seconds, connect to the VM via RDP and execute the following in **PowerShell** (*This is done to put the Golden Image into a clean SysPrep state*):
+
+    .. note::
+
+       If prompted that another user is currently signed in, click **Yes** to proceed logging in as the **Nutanix** user.
 
     .. code-block:: PowerShell
 
       Start-Process -FilePath "C:\Windows\System32\Sysprep\Sysprep.exe" -ArgumentList "/oobe /shutdown /generalize /unattend:C:\ProgramData\Frame\Sysprep\Unattend.xml" -Wait -NoNewWindow
 
-   .. note::
-
-      If prompted that another user is currently signed in, click **Yes** to proceed logging in as the **Nutanix** user.
-
    Once Sysprep is complete, the machine will automatically power off.
 
-#. Update the VM to **Eject** the Frame Guest Agent installer .iso image.
+#. Update the VM to :fa:`eject` **Eject** the Frame Guest Agent installer .iso image.
 
    .. figure:: images/23.png
 

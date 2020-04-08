@@ -8,9 +8,9 @@ While the Frame control plane is fully cloud-hosted, running on-premises desktop
 
 .. figure:: images/00.png
 
-There is the Cloud Connector Appliance (CCA), which enables Frame Platform to communicate with the Prism Central API. The CCA forwards create, start, stop, and delete VM commands to Prism Central, based on requests from Frame Platform. The CCA must be on the same VLAN as Prism Central.
+An on-premises virtual Cloud Connector Appliance (CCA), enables the cloud-hosted Frame Platform service to communicate with the on-premises Prism Central API. The CCA forwards commands to create, start, stop, and delete VMs to Prism Central, based on requests from the Frame Platform. The CCA appliance must be on the same VLAN as Prism Central.
 
-After the initial configuration following the CCA wizard deployment workflow, and upon successful registration of the AHV Cloud Account in Frame Platform, a second appliance is automatically created. This second appliance is the Workload Cloud Connector Appliance (also known as the Workload Proxy in Prism). The WCCA allows for Frame Platform to send orchestration information to all user workload VMs (Sandbox, Production instances, and Utility Servers). Without this appliance, end users will not be able to connect to the workload VMs.
+After the initial configuration following the CCA wizard deployment, and upon successful registration of the AHV Cloud Account to the Frame Platform, a second virtual appliance is automatically created. This second appliance is the Workload Cloud Connector Appliance (WCCA, also known as the Workload Proxy in Prism). The WCCA allows for Frame Platform to send orchestration information to all user workload VMs (Sandbox, Production instances, and Utility Servers). Without this appliance, end users will not be able to connect to the workload VMs.
 
 **In this lab you will deploy the Frame Cloud Connector Appliance and configure the connection between your cluster and the Frame control plane.**
 
@@ -32,6 +32,10 @@ In this exercise we'll take advantage of the Xi Frame trial offering, using your
 #. Under **Xi Cloud Services > Xi Frame**, click **Start Trial**.
 
    .. figure:: images/0a.png
+
+   .. note::
+
+     If you have already started a trial, click **Launch**
 
 #. Provide the additional requested information and click **Continue** to activate your 30 day trial.
 
@@ -70,7 +74,7 @@ Adding Prism Service Account
    - **First Name** - *Initials* Frame
    - **Last Name** - Service Account
    - **Email** - (Any e-mail address)
-   - **Password** - techX2020!
+   - **Password** - nutanix/4u
    - Under **Roles**, select **User Admin** and **Prism Central Admin**
 
    .. figure:: images/1.png
@@ -106,7 +110,7 @@ Frame uses Prism Central Categories to allow the Cloud Connector Appliance to id
 
 #. Click **Save**.
 
-#. In **Prism Central**, select :fa:`bars` **> Virtual Infrastructure > VMs** and select your *Initials*\ **-FrameImage** VM.
+#. In **Prism Central**, select :fa:`bars` **> Virtual Infrastructure > VMs** and select your *Initials*\ **-GoldImage** VM.
 
 #. Select **Actions > Manage Categories** and add the **FrameRole:MasterTemplate** value to the VM. The Frame CCA will later search for VMs with this category value. Click **Save**.
 
@@ -148,7 +152,7 @@ The CCA is distributed as a bootable ISO image, not a disk image.
 
          .. note::
 
-            Do **NOT** use your user configured VLAN. In CCA 2.1.X, the VM needs to exist in the same subnet as Prism Central. This issue is addressed in an upcoming release.
+            Do **NOT** use your UserXX-Network. In CCA 2.1.X, the VM needs to exist in the same subnet as Prism Central. This issue is addressed in an upcoming release.
 
       - Select **Add**
 
@@ -170,7 +174,7 @@ Configuring the CCA
 #. Fill in the following fields and click **Log In** to connect the CCA to your Nutanix environment:
 
    - **Username** - Previously created *Initials*\ -FramceSvc account
-   - **Password** - techX2020!
+   - **Password** - nutanix/4u
    - **Prism Central URL** - \https://<*Prism Central IP*>:9440
 
    .. figure:: images/4.png
@@ -193,7 +197,7 @@ Configuring the CCA
 
    .. figure:: images/6.png
 
-#. Under **Select Sandbox Templates**, your *Initials*\ **-FrameImage** VM should automatically appear based on the **MasterTemplate** category value previously applied. Select the VM and specify **Windows 10** from the **OS** drop down. Click **Next**.
+#. Under **Select Sandbox Templates**, your *Initials*\ **-GoldImage** VM should automatically appear based on the **MasterTemplate** category value previously applied. Select the VM and specify **Windows 10** from the **OS** drop down. Click **Next**.
 
    .. figure:: images/7.png
 
@@ -216,5 +220,9 @@ Configuring the CCA
    The **C** status indicates that the account is still being created. Prism Central will provision a Workload Proxy VM (**frame-workload-proxy-####**) in the desktop VLAN specified during CCA configuration. Once the status changes to **R**, indicating the workload proxy has been successfully provisioned, continue to the next exercise.
 
    .. figure:: images/10.png
+
+   .. note::
+
+      You may need to refresh your browser.
 
    You're now ready to begin provisioning AHV hosted desktops with Frame!
