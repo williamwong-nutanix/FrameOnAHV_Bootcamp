@@ -171,6 +171,10 @@ Configuring the CCA
 
    .. figure:: images/3.png
 
+   .. note::
+
+      Make sure you are using the same browser session as above. my.nutanix.com will look for the cookie.
+
 #. Fill in the following fields and click **Log In** to connect the CCA to your Nutanix environment:
 
    - **Username** - Previously created *Initials*\ -FramceSvc account

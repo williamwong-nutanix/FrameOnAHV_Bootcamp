@@ -69,7 +69,7 @@ Running Citrix Optimizer
  - **User Name** - Nutanix
  - **Password** - nutanix/4u
 
-#. Within the VM console, download http://10.42.194.11/workshop_staging/CitrixOptimizer.zip and extract to a directory.
+#. Within the VM console, download https://ntnx.how/CitrixOptimizer and extract to a directory.
 
 #. Right-click **CitrixOptimizer.exe** and select **Run as Administrator**.
 
@@ -96,7 +96,7 @@ Running Citrix Optimizer
 ..   Running VMware OS Optimization Tool
       +++++++++++++++++++++++++++++++++++
 
-      #. Within the VM console, download http://10.42.194.11/workshop_staging/VMwareOSOptimizationTool.zip and extract to a directory.
+      #. Within the VM console, download https://ntnx.how/VMwareOSOptimizationTool and extract to a directory.
 
       #. Right-click **VMwareOSOptimizationTool.exe** and select **Run as Administrator**.
 
