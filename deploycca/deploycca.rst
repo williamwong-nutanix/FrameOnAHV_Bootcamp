@@ -186,7 +186,7 @@ Configuring the CCA
 #. Under **Select Cluster**, fill in the following fields and click **Next**:
 
    - **Cluster for virtual desktops** - *Your assigned cluster*
-   - **Network for virtual desktops** - *Your assigned user network*
+   - **Network for virtual desktops** - Primary
    - **Cloud account name** - *Initials*\ -\ *Cluster-Name*
 
    .. figure:: images/5.png

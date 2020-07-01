@@ -12,7 +12,7 @@
    manage/manage
    flow_secure_desktops/flow_secure_desktops
    prismops/prismops_rightsize_frm_lab/prismops_rightsize_euc_lab
-..   framefiles/framefiles
+   framefiles/framefiles
 
 .. toctree::
    :maxdepth: 2
@@ -50,7 +50,7 @@ What's New
 ++++++++++
 
 - Workshop updated for the following software versions:
-    - AOS & PC 5.11.2.x
+    - AOS & PC 5.17.0.3
 
 - Optional Lab Updates:
 
