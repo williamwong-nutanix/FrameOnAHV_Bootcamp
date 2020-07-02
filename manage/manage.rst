@@ -23,7 +23,7 @@ Deploying a Desktop Pool
    - **Cloud Provider** - Nutanix
    - **Region** - *The Cloud Account Name previously configured through the CCA*
 
-   .. figure:: images/1.png
+   .. figure:: images/1b.png
 
 #. Under **Configuration**, note the available options correspond to your CCA selections. Choose an **Instance Type** and increase the slider value to provide more storage capacity to the VMs. Do **NOT** select **Persistent desktop**. Click **Next**.
 
