@@ -38,7 +38,7 @@ Deploying a VM
        - Select **Add**
 
    - Select **Add New NIC**
-       - **VLAN Name** - *User Assigned Network*
+       - **VLAN Name** - Primary
        - Select **Add**
 
 #. Click **Save** to create the VM.

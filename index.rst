@@ -6,21 +6,12 @@
    :name: _eucframe
    :hidden:
 
-   gettingstarted/gettingstarted
    goldimage/goldimage
    deploycca/deploycca
    manage/manage
    flow_secure_desktops/flow_secure_desktops
    prismops/prismops_rightsize_frm_lab/prismops_rightsize_euc_lab
-..   framefiles/framefiles
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Optional Labs
-   :name: _optional
-   :hidden:
-
-   edeploycca/deploycca
+   framefiles/framefiles
 
 .. toctree::
   :maxdepth: 2
@@ -50,7 +41,7 @@ What's New
 ++++++++++
 
 - Workshop updated for the following software versions:
-    - AOS & PC 5.11.2.x
+    - AOS & PC 5.17.0.3
 
 - Optional Lab Updates:
 
@@ -135,7 +126,7 @@ Each cluster is configured with 2 VLANs which can be used for VMs:
     - 10.21.\ *XYZ*\ .129/25
     - *XYZ1*
     - 10.21.\ *XYZ*\ .132-10.21.\ *XYZ*\ .149
-  * - User01-Network
+..  * - User01-Network
     - 10.21.\ *XYZ*\ .129/25
     - *XYZ1*
     - 10.21.\ *XYZ*\ .150-10.21.\ *XYZ*\ .200
