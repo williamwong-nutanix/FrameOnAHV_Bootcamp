@@ -9,9 +9,10 @@
    goldimage/goldimage
    deploycca/deploycca
    manage/manage
-   flow_secure_desktops/flow_secure_desktops
-   prismops/prismops_rightsize_frm_lab/prismops_rightsize_euc_lab
    framefiles/framefiles
+..   flow_secure_desktops/flow_secure_desktops
+   prismops/prismops_rightsize_frm_lab/prismops_rightsize_euc_lab
+
 
 .. toctree::
   :maxdepth: 2
